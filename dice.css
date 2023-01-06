@@ -1,0 +1,212 @@
+:root {
+    --primary-color: rgb(103, 18, 183);
+    --secondary-color: #f8ad23;
+    --tertiary-color: white;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  padding: 0;
+}
+
+.lightMode{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.darkMode{
+    background-color: rgb(27, 29, 28);
+    color: white;
+}
+.switch {
+    --button-width: 3em;
+    --button-height: 1em;
+    --toggle-diameter: 1.5em;
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 3em;
+    --color-grey: #cccccc;
+    --color-green: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium;
+   }
+   
+   .slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+   }
+   
+   .slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #fff;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider {
+    background-color: var(--color-green);
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+   }
+   
+   .switch input[type="checkbox"] {
+    display: none;
+   }
+   
+   .switch input[type="checkbox"]:active + .slider::after {
+    width: var(--toggle-wider);
+   }
+   
+   .switch input[type="checkbox"]:checked:active + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+   }
+   
+h2 {
+    color: var(--secondary-color);
+}
+
+.modeBtns {
+    margin-top: -30.1%;
+    margin-left: 35%;
+}
+
+#DarkModetext {
+    margin-top: -25%;
+    margin-left: 35%;
+    position: absolute;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25rem;
+    box-shadow: 2px 2px 4px rgba(202, 16, 16, 0.1);
+    padding: 3.2rem;
+  }
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  form div input {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 1.875rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  form div {
+    position: relative;
+    margin-bottom: 0.9rem;
+  }
+  input:focus {
+    border: 2px solid #f2796e;
+  }
+  form div i {
+    position: absolute;
+    padding: 1.875rem;
+    padding-left: 0.4rem;
+  }
+  #i{
+    padding: 0.8rem;
+  }
+  .failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 0.8rem;
+  margin-top: 0.34rem;
+}
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+
+.navbar{
+    background-color:rgb(248, 180, 7)
+}
+
+.Div-hidden{
+  display: none;
+}
+
+.count-digit, .score{
+  color: hsl(0, 0%, 100%);
+  background-color: #333;
+  font-size: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  text-shadow: 0 1px 0 white;
+  border-radius: 10%;
+ 
+}
+.separator {
+  font-size: 1.5rem;
+}
+.timer-Div{
+  margin: 2rem 0;
+}
+.score{
+  display: inline;
+  margin-left: 100px;
+}
+#img{
+  width: 7rem;
+      height: 5rem;
+}
+#startBtn{
+  display: flex;
+  margin: 3rem auto;
+}
+
+#myModal{
+  width: 20rem;
+  margin-top: 23rem;
+  margin-left: 50rem;
+}
+
+h5{
+  display: inline;
+}
+
+#close{
+  margin-left: auto;
+  outline: none;
+  border:none;
+}
+
+#mdn{
+  display :none;
+overflow:scroll;
+}
+.mdn-content{
+  background-color: #333;
+  text-align: center;
+  color: #cccccc;
+}
